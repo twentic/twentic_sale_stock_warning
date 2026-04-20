@@ -1,0 +1,13 @@
+// Stock Minimum Warning – additional colour utilities for the qty_at_date_widget.
+//
+// Bootstrap ships `text-warning` out of the box, so no extra colour definition
+// is needed here.  This file is kept as a hook for project-specific overrides.
+
+.o_field_widget {
+    // Ensure the yellow icon is clearly visible against both light and dark
+    // backgrounds without inheriting an underline from link ancestors.
+    .fa-area-chart.text-warning {
+        text-decoration: none;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="template" xml:space="preserve">
+
+    <!--
+        Extend the main widget icon:
+          • text-danger  (red)    – forecasted stock already insufficient
+          • text-warning (yellow) – stock exists but draft quotations consume it all
+    -->
+    <t t-name="stock_minimum_warning.QtyAtDate"
+       t-inherit="sale_stock.QtyAtDate"
+       t-inherit-mode="extension">
+        <xpath expr="//a" position="attributes">
+            <attribute name="t-attf-class">fa fa-area-chart cursor-pointer {{ calcData.forecasted_issue ? 'text-danger' : (calcData.draft_quotation_warning ? 'text-warning' : '') }}</attribute>
+        </xpath>
+    </t>
+
+    <!--
+        Extend the popover (draft/sent non-MTO lines only) to add:
+          • "In Unconfirmed Quotations" row  – total qty in other draft/sent orders
+          • "Net Forecasted" row             – forecasted minus draft-quotation demand
+          • "View Draft Quotations" button   – opens the competing quotations list
+    -->
+    <t t-name="stock_minimum_warning.QtyAtDatePopover"
+       t-inherit="sale_stock.QtyAtDatePopover"
+       t-inherit-mode="extension">
+
+        <xpath expr="//tbody" position="inside">
+            <t t-if="!props.record.data.is_mto and ['draft', 'sent'].includes(props.record.data.state) and props.calcData.qty_in_draft_quotations">
+
+                <!-- Qty consumed by other unconfirmed quotations -->
+                <tr>
+                    <td>
+                        <strong t-out="props.calcData.label_in_unconfirmed"/>
+                    </td>
+                    <td class="text-end text-warning">
+                        <b t-out="props.calcData.qty_in_draft_quotations"/>
+                        <t t-out="props.record.data.product_uom[1]"/>
+                    </td>
+                </tr>
+
+                <!-- Net forecasted = forecasted − draft-quotation demand -->
+                <tr>
+                    <td>
+                        <strong t-out="props.calcData.label_net_forecasted"/>
+                    </td>
+                    <td class="text-end"
+                        t-att-class="props.calcData.net_forecasted_qty &lt; 0 ? 'text-danger' : (props.calcData.net_forecasted_qty === 0 ? 'text-warning' : '')">
+                        <b t-out="props.calcData.net_forecasted_qty"/>
+                        <t t-out="props.record.data.product_uom[1]"/>
+                    </td>
+                </tr>
+
+            </t>
+        </xpath>
+
+        <!-- Button to open the competing draft quotations -->
+        <xpath expr="//button[@t-on-click='openForecast']" position="after">
+            <button
+                t-if="!props.record.data.is_mto and ['draft', 'sent'].includes(props.record.data.state) and props.calcData.qty_in_draft_quotations"
+                class="text-start btn btn-link"
+                type="button"
+                t-on-click="openDraftQuotations"
+            >
+                <i class="oi oi-fw o_button_icon oi-arrow-right"/>
+                <t t-out="props.calcData.label_view_drafts"/>
+            </button>
+        </xpath>
+
+    </t>
+
+</template>

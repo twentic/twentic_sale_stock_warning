@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#     * stock_minimum_warning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20251208\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-20 12:49+0000\n"
+"PO-Revision-Date: 2026-03-20 13:52+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_net_forecasted
+msgid "Draft Quotation Label Net Forecasted"
+msgstr "Etiqueta: Previsió neta"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_unconfirmed
+msgid "Draft Quotation Label Unconfirmed"
+msgstr "Etiqueta: En pressupostos no confirmats"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_view_drafts
+msgid "Draft Quotation Label View Drafts"
+msgstr "Etiqueta: Veure pressupostos no confirmats"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_warning
+msgid "Draft Quotation Warning"
+msgstr "Avís de pressupost esborrany"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "Draft Quotations for %s"
+msgstr "Pressupostos en esborrany per a %s"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "In Unconfirmed Quotations"
+msgstr "En pressupostos no confirmats"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "Net Forecasted"
+msgstr "Previsió neta"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid "Please review product availability before proceeding."
+msgstr "Si us plau, reviseu la disponibilitat del producte abans de continuar."
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__qty_in_draft_quotations
+msgid "Qty in Draft Quotations"
+msgstr "Qttat. en pressupostos no confirmats"
+
+#. module: stock_minimum_warning
+#: model:ir.model,name:stock_minimum_warning.model_sale_order
+msgid "Sales Order"
+msgstr "Comanda de venda"
+
+#. module: stock_minimum_warning
+#: model:ir.model,name:stock_minimum_warning.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línia de comanda de venda"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid "Stock shortage warning"
+msgstr "Avís de manca d'estoc"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid ""
+"Stock shortage detected after order(s) %(orders)s were confirmed. Review "
+"product availability in this quotation."
+msgstr ""
+"S'ha detectat una manca d'estoc després de confirmar la/les comanda(es) "
+"%(orders)s. Reviseu la disponibilitat del producte en aquest pressupost."
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid ""
+"The following sale order(s) have just been confirmed and may have caused "
+"insufficient forecasted stock for one or more products in this quotation:"
+msgstr ""
+"Les següents comandes de venda s'han confirmat recentment i poden haver "
+"causat un estoc previst insuficient per a un o més productes d'aquest "
+"pressupost:"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,help:stock_minimum_warning.field_sale_order_line__qty_in_draft_quotations
+msgid ""
+"Total quantity of this product reserved in other unconfirmed quotations "
+"(draft/sent)."
+msgstr ""
+"Quantitat total d'aquest producte reservada en altres pressupostos no "
+"confirmats (esborrany/enviat)."
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,help:stock_minimum_warning.field_sale_order_line__draft_quotation_warning
+msgid ""
+"True when there is enough total forecasted stock to cover this line but, "
+"after subtracting quantities already in other unconfirmed quotations, the "
+"net forecasted stock falls below the quantity to deliver."
+msgstr ""
+"Cert quan l'estoc previst és suficient per a aquesta línia però, en "
+"descomptar les quantitats en altres pressupostos no confirmats, la previsió "
+"neta queda per sota de la quantitat a lliurar."
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "View Draft Quotations"
+msgstr "Veure pressupostos no confirmats"

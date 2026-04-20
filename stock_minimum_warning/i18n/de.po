@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#     * stock_minimum_warning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20251208\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-20 12:49+0000\n"
+"PO-Revision-Date: 2026-03-20 13:52+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_net_forecasted
+msgid "Draft Quotation Label Net Forecasted"
+msgstr "Bezeichnung: Nettoprognose"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_unconfirmed
+msgid "Draft Quotation Label Unconfirmed"
+msgstr "Bezeichnung: In nicht bestätigten Angeboten"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_label_view_drafts
+msgid "Draft Quotation Label View Drafts"
+msgstr "Bezeichnung: Nicht bestätigte Angebote anzeigen"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__draft_quotation_warning
+msgid "Draft Quotation Warning"
+msgstr "Angebotswarnung"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "Draft Quotations for %s"
+msgstr "Nicht bestätigte Angebote für %s"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "In Unconfirmed Quotations"
+msgstr "In nicht bestätigten Angeboten"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "Net Forecasted"
+msgstr "Nettoprognose"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid "Please review product availability before proceeding."
+msgstr "Bitte überprüfen Sie die Produktverfügbarkeit, bevor Sie fortfahren."
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,field_description:stock_minimum_warning.field_sale_order_line__qty_in_draft_quotations
+msgid "Qty in Draft Quotations"
+msgstr "Menge in nicht bestätigten Angeboten"
+
+#. module: stock_minimum_warning
+#: model:ir.model,name:stock_minimum_warning.model_sale_order
+msgid "Sales Order"
+msgstr "Auftrag"
+
+#. module: stock_minimum_warning
+#: model:ir.model,name:stock_minimum_warning.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Auftragsposition"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid "Stock shortage warning"
+msgstr "Warnung: Bestandsmangel"
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid ""
+"Stock shortage detected after order(s) %(orders)s were confirmed. Review "
+"product availability in this quotation."
+msgstr ""
+"Bestandsmangel erkannt, nachdem Auftrag/Aufträge %(orders)s bestätigt "
+"wurde(n). Bitte Produktverfügbarkeit in diesem Angebot prüfen."
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order.py:0
+msgid ""
+"The following sale order(s) have just been confirmed and may have caused "
+"insufficient forecasted stock for one or more products in this quotation:"
+msgstr ""
+"Die folgenden Aufträge wurden soeben bestätigt und können zu "
+"unzureichendem prognostizierten Bestand für ein oder mehrere Produkte "
+"in diesem Angebot geführt haben:"
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,help:stock_minimum_warning.field_sale_order_line__qty_in_draft_quotations
+msgid ""
+"Total quantity of this product reserved in other unconfirmed quotations "
+"(draft/sent)."
+msgstr ""
+"Gesamtmenge dieses Produkts, die in anderen nicht bestätigten Angeboten "
+"(Entwurf/Gesendet) reserviert ist."
+
+#. module: stock_minimum_warning
+#: model:ir.model.fields,help:stock_minimum_warning.field_sale_order_line__draft_quotation_warning
+msgid ""
+"True when there is enough total forecasted stock to cover this line but, "
+"after subtracting quantities already in other unconfirmed quotations, the "
+"net forecasted stock falls below the quantity to deliver."
+msgstr ""
+"Wahr, wenn der Gesamtbestand ausreicht, aber nach Abzug der Mengen in "
+"anderen nicht bestätigten Angeboten der Nettoprognosebestand unter die "
+"zu liefernde Menge fällt."
+
+#. module: stock_minimum_warning
+#. odoo-python
+#: code:addons/stock_minimum_warning/models/sale_order_line.py:0
+msgid "View Draft Quotations"
+msgstr "Nicht bestätigte Angebote anzeigen"
