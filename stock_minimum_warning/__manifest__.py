@@ -21,6 +21,7 @@
             'stock_minimum_warning/static/src/scss/qty_at_date_widget_patch.scss',
         ],
     },
+    'images': ['static/description/main_screenshot.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
